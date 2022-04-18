@@ -3,7 +3,8 @@ Learn detecting hand with python script and opencv 🖐
 
 Some Refrences : 
 
-![image](https://user-images.githubusercontent.com/99522867/163821714-7f34c300-11be-481e-b5e5-a776a82996c4.png)
+![image](https://user-images.githubusercontent.com/99522867/163822207-459fa711-8f5e-458f-b318-a7686c0e7725.png)
+
 
 Sources : 
 - https://google.github.io/mediapipe/images/mobile/hand_landmarks.png
