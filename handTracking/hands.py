@@ -8,3 +8,6 @@ mpHands = mp.solutions.hands
 hands = mpHands.Hands()
 mpDrawStyles = mp.solutions.drawing_styles
 mpDraw = mp.solutions.drawing_utils
+
+pTime = 0
+cTime = 0
