@@ -30,3 +30,9 @@ while True:
             # mpDraw.draw_landmarks(img, handLM, mpHands.HAND_CONNECTIONS, mpDrawStyles.get_default_hand_landmarks_style(), 
                 # mpDrawStyles.get_default_hand_connections_style())
         print("\n")
+    
+    cTime = time.time()
+    fps = 1/(cTime-pTime)
+    pTime = cTime
+
+    cv2.putText(img, "FPS : " + str(int(fps)), (10,70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
