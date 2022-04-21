@@ -21,3 +21,10 @@ while True:
     if results.multi_hand_landmarks:
         for handLM in results.multi_hand_landmarks:
             for id, lm in enumerate(handLM.landmark):
+                h, w, c = img.shape
+                cx, cy = int(lm.x*w), int(lm.y*h)
+                print(id, cx, cy)
+                cv2.circle(img, (cx,cy), 10, (0, 255, 0), cv2.FILLED) 
+                # if you feel the circle too big you can change "cv2.FILLED" with number
+                # i think "cv2.FILLED" like number 5, so you can change under number 5
+                # cv2.circle(img, (cx,cy), 10, (0, 255, 0), 3) 
