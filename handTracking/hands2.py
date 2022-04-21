@@ -28,3 +28,5 @@ while True:
                 # if you feel the circle too big you can change "cv2.FILLED" with number
                 # i think "cv2.FILLED" like number 5, so you can change under number 5
                 # cv2.circle(img, (cx,cy), 10, (0, 255, 0), 3) 
+            mpDraw.draw_landmarks(img, handLM, mpHands.HAND_CONNECTIONS)
+        print("\n")
