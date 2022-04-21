@@ -30,3 +30,14 @@ while True:
                 # cv2.circle(img, (cx,cy), 10, (0, 255, 0), 3) 
             mpDraw.draw_landmarks(img, handLM, mpHands.HAND_CONNECTIONS)
         print("\n")
+    
+    cTime = time.time()
+    fps = 1/(cTime-pTime)
+    pTime = cTime
+
+    cv2.putText(img, "FPS : " + str(int(fps)), (10,70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
+
+    cv2.imshow("Webcam", img)
+    cv2.waitKey(1)
+    
+cap.release()
