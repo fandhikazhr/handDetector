@@ -31,3 +31,20 @@ def main():
     cap = cv2.VideoCapture(0)
     pTime = 0
     cTime = 0
+
+    tracking = handTrack()
+    while True:
+        success, img = cap.read()
+        img = tracking.findHands(img)
+        cTime = time.time()
+        fps = 1/(cTime-pTime)
+        pTime = cTime
+
+        cv2.putText(img, "FPS : " + str(int(fps)), (10,70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
+
+        cv2.imshow("Webcam", img)
+        cv2.waitKey(1)
+    cap.release()
+
+if __name__ == "__main__":
+    main()
