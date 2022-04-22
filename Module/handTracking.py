@@ -18,3 +18,12 @@ class handTrack():
         img = cv2.flip(img , 1)
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         results = self.hands.process(imgRGB)
+        
+        if results.multi_hand_landmarks:
+            for handLM in results.multi_hand_landmarks:
+                if draw:
+                    # self.mpDraw.draw_landmarks(img, handLM, self.mpHands.HAND_CONNECTIONS)
+                    self.mpDraw.draw_landmarks(img, handLM, self.mpHands.HAND_CONNECTIONS, self.mpDrawStyles.get_default_hand_landmarks_style(), 
+                        self.mpDrawStyles.get_default_hand_connections_style())
+        return img
+        
