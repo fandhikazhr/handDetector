@@ -27,3 +27,7 @@ class handTrack():
                         self.mpDrawStyles.get_default_hand_connections_style())
         return img
         
+def main():
+    cap = cv2.VideoCapture(0)
+    pTime = 0
+    cTime = 0
