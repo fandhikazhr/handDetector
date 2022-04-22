@@ -13,3 +13,8 @@ class handTrack():
         self.hands = self.mpHands.Hands()
         self.mpDrawStyles = mp.solutions.drawing_styles
         self.mpDraw = mp.solutions.drawing_utils
+
+    def findHands(self, img, draw=True):
+        img = cv2.flip(img , 1)
+        imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        results = self.hands.process(imgRGB)
