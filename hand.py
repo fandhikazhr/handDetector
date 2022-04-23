@@ -33,4 +33,9 @@ while True:
         # print(distanceCM, distance)
         # print(abs(x2-x1), distance)
     cv2.imshow("Webcam", img)
-    cv2.waitKey(1)
+    key = cv2.waitKey(1)
+    if key == 27:
+        break
+        
+cap.release()
+cv2.destroyAllWindows()
